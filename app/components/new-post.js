@@ -7,7 +7,7 @@ export default Ember.Component.extend({
       this.set('addNewPost', true);
     },
 
-    save1() {
+    savePost() {
       var params = {
         title: this.get('title'),
         author: this.get('author'),
@@ -16,7 +16,7 @@ export default Ember.Component.extend({
         category: this.get('category'),
       };
       this.set('addNewPost', false),
-      this.sendAction('save2', params);
+      this.sendAction('savePost', params);
     }
   }
 });

@@ -9,19 +9,19 @@ export default Ember.Route.extend({
   },
 
   actions: {
-    save3(params) {
+    savePost(params) {
       var newPost = this.store.createRecord('post', params);
       newPost.save();
       this.transitionTo('index');
     },
 
-    save6(params) {
+    saveCategory(params) {
       var newCategory = this.store.createRecord('category', params);
       newCategory.save();
       this.transitionTo('index');
     },
 
-    update(post, params) {
+    updatePost(post, params) {
       Object.keys(params).forEach(function(key) {
         if(params[key]!==undefined) {
           post.set(key,params[key]);

@@ -1,3 +1,6 @@
 <h2>{{model.name}}:</h2>
 
-{{single-category category=model}}
+{{category-tile category=model savePost="savePost"}}
+{{new-post savePost="savePost" category=model}}
+
+<!-- {{single-category category=model}} -->
