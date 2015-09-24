@@ -16,6 +16,15 @@
   "content": "A 1 cup of couscous adds 6g of protein to your day, or 12% of the daily intake recommended by the Food and Drug Administration. Other grains typically provide a lower levels of this macro-nutrient, which is needed for muscle building after exercise, and sustaining energy. A perfect fit for today's health–conscious eaters.",
   "image": "http://jodiburke.com/wp-content/uploads/2011/01/Jodi-90-Caul-cous-0101.jpg",
   "category": "Vegetarian"
-}]
+}],
 
+
+
+  "categories": [{
+    "name": "Vegan",
+    "posts":["Stuffed Bell Peppers","Couscous, Mint, Tomato"]
+    }, {
+    "name": "Health",
+    "posts": ["Couscous Health Benefits"]
+  }]
 }

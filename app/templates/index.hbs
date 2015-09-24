@@ -7,7 +7,7 @@
 <h5>Posts:</h5>
 
 <ul>
-  {{#each model as |post-unit|}}
+  {{#each model.posts as |post-unit|}}
     {{post-tile post=post-unit update="update" destroyPost="destroyPost"}}
   {{/each}}
 </ul>
@@ -20,8 +20,10 @@
 
 <ul>
   {{#each model.category as |category|}}
-    <li>{{#link-to 'category' category.id}}{{category.posts}}{{/link-to}}</li>
+  {{category-tile category=category}}
+    <!-- <li>{{#link-to 'category' category.id}}{{category.posts}}{{/link-to}}</li> -->
   {{/each}}
 </ul>
 
+{{new-category save5="save6"}}
 <!-- {{new-category saveCategory="saveCategory"}} -->
