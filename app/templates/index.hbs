@@ -12,16 +12,14 @@
   {{/each}}
 </ul>
 
-{{new-post save2="save3"}}
+<!-- {{new-post save2="save3"}} -->
 
-<br>
 
 <h5>Categories:</h5>
 
 <ul>
-  {{#each model.category as |category|}}
-  {{category-tile category=category}}
-    <!-- <li>{{#link-to 'category' category.id}}{{category.posts}}{{/link-to}}</li> -->
+  {{#each model.categories as |category|}}
+    {{category-tile category=category}}
   {{/each}}
 </ul>
 

@@ -1,4 +1,13 @@
-{{post.title}} in the {{category.name}} Category
+<!-- {{post.title}} in the {{category.name}} Category
 <br>
-<p><img src={{post.image}}></p>
-{{post.content}}
+{{post.content}} -->
+
+{{category.name}}
+
+<ul>
+  {{#each model.posts as |post-unit|}}
+    {{post-tile post=post-unit}}
+  {{/each}}
+</ul>
+
+{{new-post save2="save3"}}
