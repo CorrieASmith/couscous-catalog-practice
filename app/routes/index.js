@@ -1,9 +1,15 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  model() {
-    return this.store.findAll('post');
-  },
+  // model() {
+  //   return this.store.findAll('post');
+  // },
+    model() {
+      return Ember.RSVP.hash({
+        posts: this.store.findAll('post'),
+        category: this.store.findAll('category')
+      });
+    },
 
   actions: {
     save3(params) {
@@ -11,7 +17,7 @@ export default Ember.Route.extend({
       newPost.save();
       this.transitionTo('index');
     },
-    
+
     update(post, params) {
       Object.keys(params).forEach(function(key) {
         if(params[key]!==undefined) {

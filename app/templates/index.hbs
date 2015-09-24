@@ -1,8 +1,10 @@
 <h1>Couscous Catalog</h1>
 
 <br>
-<p>You have come to the right place for all your couscous needs.</p>
+<h4>You have come to the right place for all your couscous needs.</h4>
 <br>
+
+<h5>Posts:</h5>
 
 <ul>
   {{#each model as |post-unit|}}
@@ -11,3 +13,15 @@
 </ul>
 
 {{new-post save2="save3"}}
+
+<br>
+
+<h5>Categories:</h5>
+
+<ul>
+  {{#each model.category as |category|}}
+    <li>{{#link-to 'category' category.id}}{{category.posts}}{{/link-to}}</li>
+  {{/each}}
+</ul>
+
+<!-- {{new-category saveCategory="saveCategory"}} -->
